@@ -1,0 +1,15 @@
+{
+  "name": "lesson5",
+  "version": "1.0.0",
+  "description": "WEBD 6201 Lesson 5",
+  "main": "index.js",
+  "repository": "https://github.com/naheedshaikh/WEBD6201-W2020-Lesson5.git",
+  "author": "Naheed Shaikh <naheed.shaikh@dcmail.ca>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
+  }
+}
