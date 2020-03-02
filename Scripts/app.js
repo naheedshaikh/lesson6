@@ -15,31 +15,48 @@ let app;
      */
     function Start()
     {
-        let mainContent = $("#mainContent")[0];
-        console.log(mainContent);
-
-        let mainCont = document.getElementById("mainContent");
-        console.log(mainCont);
-
-        let mainQuery = document.querySelectorAll("#mainContent")[0];
-        console.log(mainQuery);
-
-        let mainFirstQuery = document.querySelector("#mainContent");
-        console.log(mainFirstQuery);
-
-        //$(".display-4").hide();   //it hide the display-4 "Hello World"
-
-        //console.log($(".nav-link").css("font-weight","bold")); //it make bold all the items of nave links
-
-        //let navlink = document.getElementsByClassName("nav-link"); To hide the first element from nav-link
-
-        //navlink[0].style.display = "none";
-
-        //$(".nav-link").hide();
-
+        PageSwitcher();
         Main();
     }
 
+    function PageSwitcher()
+    {
+        let name = window.location.pathname;
+        
+        let pageName = name.substring(1, name.length - 5);
+
+        switch(pageName)
+        {
+            case "index":
+                HomePageContent();
+                break;
+            case "products":
+                break;
+            case "services":
+                break;
+            case "contact":
+                break;
+            case "[rojects":
+                break;
+            default:
+                console.error("Landed in a page that is not defined");
+                break;
+                
+        }
+        //add a class of active to the active link using jquery
+        $("#" +pageName).addClass("active");
+        
+       //add a class of active to the active link using java Script
+       // document.querySelector("#"+pageName).className = "nave-item-active";
+    }
+
+    function HomePageContent()
+    {
+        document.getElementById("home").className = "nav-item active"   ;
+        $("button").click(()=>{
+            location.href = "projects.html"
+        });
+    }
     /**
      * Main Program entry point is here
      *
